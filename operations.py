@@ -171,6 +171,9 @@ class Operations:
             if current_fitness > max_fitness:
                 max_fitness=current_fitness
         self.fitness_maximums.append(max_fitness)
+
+
+
     def print_chromosome(chromosome):
         print('[',end='')
         for value in chromosome:
@@ -186,8 +189,19 @@ class Operations:
             print(' ',end='')
         print('}',end='')
         print()
-    
 
+    def print_solution_population(self,poblations):
+        print("------------------------------------     POPULATION SOLUTION         ----------------------------------------")
+        for poblation in poblations:
+            fitness=self.get_fitness_function_master(poblation.chromosome)
+            if fitness == self.most_powerful_fitness:
+                print("------------------------------------     CHROMOSOME RESULT          ----------------------------------------")
+                Operations.print_chromosome(poblation.chromosome)
+                print(" Fitness="+str(poblation.fitness))
+                print("------------------------------------------------------------------------------------------------------------")
+            else:
+                Operations.print_chromosome(poblation.chromosome)
+                print(" Fitness="+str(poblation.fitness))
 
     def initializate_all(self,poblation_size,number_genes,crossover,mutation):
         operation=Operations()
