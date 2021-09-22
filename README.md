@@ -11,6 +11,7 @@
 * La Fuente Mercedes
 
 ### IMPORTANT! HOW TO USE :hammer:
+* For a better reading of the document desable dark mode if your git is configured that way because the formulas in latex do not change the font color to white so it is lost with the background.
 * Clone from the main repository using: 
 
      -git clone <repository link>
