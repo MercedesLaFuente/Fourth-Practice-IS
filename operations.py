@@ -1,10 +1,22 @@
 from chromosome import Chromosome
 import random
+
 class Operations:
+
     chromosome_populations=[] 
     crossover_probability=0.00
     mutation_probability=0.000
     most_powerful_fitness=0
+    reproduction_probabilities=[]
+
+    def get_all_reproduction_probabilities(self):
+        self.reproduction_probabilities=[]
+        for chromosome in self.chromosome_populations:
+            self.reproduction_probabilities.append(chromosome.reproduction_probability)
+    
+    def get_reproduction_probabilities(self):
+        return self.reproduction_probabilities
+
     def set_crossover_probability(self,probability):
         self.crossover_probability=probability
     
