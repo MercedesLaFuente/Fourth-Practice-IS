@@ -1,13 +1,25 @@
 from chromosome import Chromosome
 import random
+import copy
+
+
+
+
+
 
 class Operations:
 
     chromosome_populations=[] 
+    
     crossover_probability=0.00
+    
     mutation_probability=0.000
+    
     most_powerful_fitness=0
+    
     reproduction_probabilities=[]
+
+
 
     def set_crossover_probability(self,probability):
         self.crossover_probability=probability
@@ -55,6 +67,7 @@ class Operations:
         chromosome=self.get_chromosome(position).chromosome
         return sum(chromosome)
 
+
     def get_fitness_population_function(self):
         total_sum=0
         count=0
@@ -84,6 +97,23 @@ class Operations:
     def get_reproduction_probabilities(self):
         return self.reproduction_probabilities
 
+    def crossover(self,chromosome1,chromosome2,position):
+        copy_1=copy.deepcopy(chromosome1)
+        copy_2=copy.deepcopy(chromosome2)
+        offspring1=copy.deepcopy(chromosome1)
+        offspring2=copy.deepcopy(chromosome2)
+        offspring1.chromosome=copy_1.chromosome[:position]+copy_2.chromosome[position:]
+        copy_1=copy.deepcopy(chromosome1)
+        copy_2=copy.deepcopy(chromosome2)
+        offspring2.chromosome=copy_2.chromosome[:position]+copy_1.chromosome[position:]
+        fitness1=self.get_fitness_function_master(offspring1.chromosome)
+        fitness2=self.get_fitness_function_master(offspring2.chromosome)
+        offspring1.fitness=fitness1
+        offspring2.fitness=fitness2
+        offspring1.reproduction_probability=0.0
+        offspring2.reproduction_probability=0.0
+        return offspring1,offspring2
+
     def print_chromosome(chromosome):
         print('[',end='')
         for value in chromosome:
@@ -99,4 +129,4 @@ class Operations:
             print(' ',end='')
         print('}',end='')
         print()
-        
+    
