@@ -1,10 +1,10 @@
 from chromosome import Chromosome
 import random
 import copy
-
-
-
-
+import timeit
+import time
+import numpy as np
+from matplotlib import pyplot as plt
 
 
 class Operations:
@@ -20,7 +20,6 @@ class Operations:
     most_powerful_fitness=0
     generation=1
     
-
     def set_crossover_probability(self,probability):
         self.crossover_probability=probability
     
@@ -219,7 +218,63 @@ class Operations:
         print('}',end='')
         print()
 
+    def genetic_algorithm(self):
+        current_fitness=self.find_the_most_powerful_fitness(self.chromosome_populations)
+        while current_fitness == 0  :
+            new_poblation=self.create_new_generation_of_chromosomes()
+            self.generation=self.generation+1
+            self.chromosome_populations=new_poblation
+            current_fitness=self.find_the_most_powerful_fitness(new_poblation)
+        if current_fitness != 0:
+            self.print_solution_population(new_poblation)
+            self.generations.append(current_fitness)
+            return current_fitness
 
+    def genetic_algorithm_with_limit(self,num_generation):
+        cont=0
+        while cont < num_generation:
+            new_poblation=self.create_new_generation_of_chromosomes()
+            self.generation=self.generation+1
+            self.chromosome_populations=new_poblation
+            self.find_the_fitness_maximums(self.chromosome_populations)
+            self.find_the_fitness_minimums(self.chromosome_populations)
+            self.find_the_fitness_average(self.chromosome_populations)
+            cont=cont+1
+        x=np.array(range(len(self.fitness_maximums)))
+        y=np.zeros(len(x))
+        for i in range(len(x)):
+            y[i]=self.fitness_maximums[i]
+        x_2=np.array(range(len(self.fitness_minimums)))
+        y_2=np.zeros(len(x_2))
+        for i in range (len(x)):
+            y_2[i]=self.fitness_minimums[i]
+        x_3=np.array(range(len(self.fitness_average)))
+        y_3=np.zeros(len(x_3))
+        for i in range(len(x_3)):
+            y_3[i]=self.fitness_average[i]
+        #graphic 1
+        plt.figure(figsize=(11,11))
+        plt.subplot(2,2,1)
+        plt.plot(x, y,'r')
+        plt.title('Max')
+        plt.xlabel('Generation')
+        plt.ylabel('Fitness Fuction')
+
+        #graphic 2
+        plt.subplot(2,2,2)
+        plt.plot(x_2, y_2,'g')
+        plt.title('Min')
+        plt.xlabel('Generation')
+        plt.ylabel('Fitness Fuction')
+
+        #graphic 3
+        plt.subplot(2,2,3.3)
+        plt.plot(x_3, y_3,'b')
+        plt.title('Average')
+        plt.xlabel('Generation')
+        plt.ylabel('average fitness')
+        plt.show()
+        
 
     def initializate_all(self,poblation_size,number_genes,crossover,mutation):
         operation=Operations()
@@ -232,3 +287,9 @@ class Operations:
         operation=Operations()
         operation.generate_random_chromosome_populations(poblation_size,number_genes,crossover,mutation)
         values=operation.genetic_algorithm_with_limit(num_generation)
+
+
+
+
+#if __name__ == '__main__':
+    #Unir main
