@@ -16,8 +16,10 @@
 
      -git clone (repository link)
 * For the correct functioning of the code you first need to install numpy and matplotlib from the console with the following command:                   
-             -pip install numpy
-             -pip install matplotlib
+
+     -pip install numpy
+
+     -pip install matplotlib
 * Insert in the console terminal 'python operations.py' to start the program
 * The program will ask you to enter the size of the chromosome population, the number of genes it will have, its probability of crossover and mutation.
 
