@@ -134,3 +134,80 @@ The program allows to generate a population of n chromosomes with m genes that c
 ![000000000](https://user-images.githubusercontent.com/74753713/134423479-d5af4764-7894-4945-90cb-3fe0e1450e19.png)
 
 
+
+#### 3. Run the same experiment, but this time without mutation (pc = 0.7, pm = 0).
+
+#### :arrow_down_small: Experiments and results:
+  
+ Execution number |  Generation in which the chromosome maximizing fitness function was found |  Execution time (Seconds)
+  :---: | :---: | :---: 
+  1 |  38 | 4.16633230
+  2 |  20 | 2.83000810
+  3 |  6 | 1.64157170          
+  4 |  25 | 1.92745970          
+  5 |  76 | 2.26325440           
+  6 |  24 | 7.23245600           
+  7 |  23 | 15.76359850           
+  8 |  15 | 1.15684960           
+  9 |  25 | 7.90881470           
+  10 | 14 | 9.70879890            
+  11 | 15 | 18.24805320           
+  12 | 24 | 47.75926510          
+  13 | 33 | 2.51084610           
+  14 | 13 | 0.98148050           
+  15 | 9  | 2.60891980           
+  16 | 21  | 21.31831860            
+  17 | 21  | 26.01965990           
+  18 | 9  | 15.68466570           
+  19 | 9  | 22.51416600            
+  20 | 13 | 47.84324610
+
+#### Results of the First experiment
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{38+20+6+25+76+24+23+15+25+14+15+24+33+13+9+21+21+9+9+13}{20}" title="\Large x=\media" />
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\21.65" title="\Large x=\media" />
+
+
+ 
+#### Graphical analysis of generations with maximal fitness function 
+     
+![07000000](https://user-images.githubusercontent.com/74753713/134423622-c2e0c6ab-542f-459f-9764-458e2c837342.png)
+
+
+#### 4.1. Run the same experiment, but this time without mutation (pc = 0.9, pm = 0.001).
+ 
+
+#### :arrow_down_small: Experiments and results:
+  
+ Execution number |  Generation in which the chromosome maximizing fitness function was found |  Execution time (Seconds)
+  :---: | :---: | :---: 
+  1 |  24 | 11.96011120
+  2 |  20 | 19.76093240
+  3 |  12 | 20.27765470          
+  4 |  14 | 37.08264380         
+  5 |  13 | 19.44398190           
+  6 |  16 | 32.08531110           
+  7 |  12 | 20.48242000           
+  8 |  13 | 20.82789020           
+  9 |  12 | 19.85624720           
+  10 | 20 | 2.08549860            
+  11 | 15 | 6.11905070           
+  12 | 10 | 9.88138950           
+  13 | 17 | 16.55346330          
+  14 | 11 | 29.10531540           
+  15 | 13  | 20.80233220           
+  16 | 27  | 10.55097450            
+  17 | 18  | 16.11696630            
+  18 | 14  | 22.32696600           
+  19 | 11  | 28.29959050            
+  20 | 16 | 36.62015900 
+
+#### Results of the First experiment
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{24+20+12+14+13+16+12+13+12+20+15+10+17+11+13+27+18+14+11+16}{20}" title="\Large x=\media" />
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\15.4" title="\Large x=\media" />
+    
+#### Graphical analysis of generations with maximal fitness function 
+ 
+![090001](https://user-images.githubusercontent.com/74753713/134423673-2ab32c85-2dd7-4bb8-85d8-0a785cde1aef.png)
+
