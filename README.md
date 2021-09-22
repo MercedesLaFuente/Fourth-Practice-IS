@@ -302,6 +302,87 @@ After the execution of the experiments carried out in the previous points, all t
 It can be evidenced that a crossover probability that is less or more than 0.7 does not give us an optimal solution in terms of time and generations but all this individually since the results of the averages show that the more croosover you have, the average of all the populations that were generated will find the maximum function in one of their chromosomes faster than with a low croosover due to the continuous exchange of genes which gives a higher probability of finding the maximum fitness function.
 Reviewing exhaustively the results that perform worse, it can be seen that those with a lower probability of croosover are the ones that less quickly find the chromosome that maximizes the function, so also the probability of mutation being so low does not affect in a radical way the improvement or worsening of the execution of the program. 
 
+
+#### 6.  Execute the algorithm 20 times, for each run report in which generation the strongest chromosome was found. It reports the average of this value. Vary the population size. Test with 50, 100, 500, 1000 chromosomes, which is the best choice, why?
+ 
+
+#### :arrow_down_small:  Experiments and results with a population of 50, gene numbers of 20, crossover of 0.9 and mutation of 0.001:
+  
+ Execution number |  Generation in which the chromosome maximizing fitness function was found |  Execution time (Seconds)
+  :---: | :---: | :---: 
+  1 |  21 | 9.74570960
+  2 |  32 | 0.66635420
+  3 |  15 | 4.41432850          
+  4 |  21 | 1.68918620          
+  5 |  20 | 3.71435660           
+ 
+
+#### Results of the Sixth experiment
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{21+32+15+21+20}{5}" title="\Large x=\media" />
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\21.8" title="\Large x=\media" />
+
+#### :arrow_down_small:  Experiments and results with a population of 100, gene numbers of 20, crossover of 0.9 and mutation of 0.001:
+  
+ Execution number |  Generation in which the chromosome maximizing fitness function was found |  Execution time (Seconds)
+  :---: | :---: | :---: 
+  1 |  25 | 1.93188440
+  2 |  24 | 8.29584200
+  3 |  13 | 8.47734400          
+  4 |  11 | 12.25161680          
+  5 |  10 | 17.46511480           
+ 
+
+#### Results of the Sixth experiment
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{25+24+13+11+10}{5}" title="\Large x=\media" />
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\16.6" title="\Large x=\media" />
+     
+
+#### :arrow_down_small: Experiments and results with a population of 500, gene numbers of 20, crossover of 0.9 and mutation of 0.001:
+  
+ Execution number |  Generation in which the chromosome maximizing fitness function was found |  Execution time (Seconds)
+  :---: | :---: | :---: 
+  1 |  16 | 29.3446158
+  2 |  10 | 71.722256390
+  3 |   6 | 94.07377360          
+  4 |  18 | 33.52221890           
+  5 |  56 | 56.06772340            
+ 
+
+#### Results of the Sixth experiment
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{16+10+6+18+56}{5}" title="\Large x=\media" />
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\21.2" title="\Large x=\media" />
+     
+
+     
+#### :arrow_down_small:  Experiments and results with a population of 1000, gene numbers of 20, crossover of 0.9 and mutation of 0.001:
+ Execution number |  Generation in which the chromosome maximizing fitness function was found |  Execution time (Seconds)
+  :---: | :---: | :---: 
+  1 |  16 | 125.83076870 
+  2 |  9 |  261.95529180
+  3 |  9 |  86.95194980          
+  4 |  9 |  602.19522240          
+  5 |  14 | 133.70423330  
+     
+ #### Results of the Sixth experiment
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{16+9+9+9+14}{5}" title="\Large x=\media" />
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\11.4" title="\Large x=\media" >
+
+
+## CONCLUSION
+
+
+
+
+## BIBLIOGRAPHY
+* Class slides
+
+
+
  
 
 
