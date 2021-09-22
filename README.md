@@ -124,7 +124,7 @@ The program allows to generate a population of n chromosomes with m genes that c
   19 | 2409  | 190.25674710            
   20 | 3432 | 283.31913680 
 
-#### Results of the First experiment
+#### Results of the Second experiment
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{2482+2271+2035+3527+3914+5550+4568+2210+1050+3296+3819+2756+2676+2701+2735+3160+4411+3423+2409+3432}{20}" title="\Large x=\media" />
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\3121.25" title="\Large x=\media" />
@@ -162,7 +162,7 @@ The program allows to generate a population of n chromosomes with m genes that c
   19 | 9  | 22.51416600            
   20 | 13 | 47.84324610
 
-#### Results of the First experiment
+#### Results of the Third experiment
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{38+20+6+25+76+24+23+15+25+14+15+24+33+13+9+21+21+9+9+13}{20}" title="\Large x=\media" />
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\21.65" title="\Large x=\media" />
@@ -202,7 +202,7 @@ The program allows to generate a population of n chromosomes with m genes that c
   19 | 11  | 28.29959050            
   20 | 16 | 36.62015900 
 
-#### Results of the First experiment
+#### Results of the Fourth experiment
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{24+20+12+14+13+16+12+13+12+20+15+10+17+11+13+27+18+14+11+16}{20}" title="\Large x=\media" />
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\15.4" title="\Large x=\media" />
@@ -210,4 +210,98 @@ The program allows to generate a population of n chromosomes with m genes that c
 #### Graphical analysis of generations with maximal fitness function 
  
 ![090001](https://user-images.githubusercontent.com/74753713/134423673-2ab32c85-2dd7-4bb8-85d8-0a785cde1aef.png)
+
+
+#### 4.2. Run the same experiment, but this time without mutation (pc = 0.3, pm = 0.001).
+ 
+
+#### :arrow_down_small: Experiments and results:
+  
+ Execution number |  Generation in which the chromosome maximizing fitness function was found |  Execution time (Seconds)
+  :---: | :---: | :---: 
+  1 |  17 | 1.26826350
+  2 |  163 | 14.71855460
+  3 |  42 | 15.85308280          
+  4 |  33 | 22.10504350          
+  5 |  23 | 30.34214130           
+  6 |  35 | 4.27154930           
+  7 |  52 | 15.41029200           
+  8 |  20 | 13.16294510           
+  9 |  18 | 27.38692610           
+  10 | 17 | 37.38817980            
+  11 | 29 | 2.73870760           
+  12 | 10 | 2.81559650           
+  13 | 16 | 10.29456540           
+  14 | 15 | 23.55947040            
+  15 | 12  | 22.22941030           
+  16 | 97  | 7.35927310            
+  17 | 20  | 5.83283670            
+  18 | 19  | 12.34920180           
+  19 | 27  | 36.9355500            
+  20 | 13 | 25.75466900 
+
+#### Results of the Fourth experiment
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{17+163+42+33+23+35+52+20+18+17+29+10+16+15+12+97+20+19+27+13}{20}" title="\Large x=\media" />
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\33.9" title="\Large x=\media" />
+     
+#### Graphical analysis of generations with maximal fitness function 
+     
+
+ ![03001](https://user-images.githubusercontent.com/74753713/134423736-2de27aee-df55-40e3-aca2-3cefd4c63472.png)
+
+   
+#### 4.3. Run the same experiment, but this time without mutation (pc = 0.5, pm = 0.001).
+ 
+
+#### :arrow_down_small: Experiments and results:
+  
+ Execution number |  Generation in which the chromosome maximizing fitness function was found |  Execution time (Seconds)
+  :---: | :---: | :---: 
+  1 |  40 | 4.27282550
+  2 |  20 | 7.94700230
+  3 |  28 | 3.05053340          
+  4 |  24 | 9.07533950         
+  5 |  38 | 3.99639560           
+  6 |  21 | 8.90077520           
+  7 |  47 | 4.96965880           
+  8 |  19 | 8.06619350          
+  9 |  17 | 14.67843450           
+  10 | 18 | 28.29504920           
+  11 | 47 | 5.68776170           
+  12 | 13 | 5.16924510           
+  13 | 28 | 26.68898190           
+  14 | 24 | 2.70849930            
+  15 | 29  | 12.65698850           
+  16 | 15  | 13.40490390            
+  17 | 16  | 24.24160940            
+  18 | 25  | 9.93420250           
+  19 | 17  | 15.81546580            
+  20 | 18 | 28.74635280 
+
+#### Results of the Fourth experiment
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{40+20+28+24+38+21+47+19+17+18+47+13+28+24+29+15+16+25+17+18}{20}" title="\Large x=\media" />
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\25.2" title="\Large x=\media" />
+
+#### Graphical analysis of generations with maximal fitness function 
+     
+![0050001](https://user-images.githubusercontent.com/74753713/134423792-e1dd7c8f-e0ca-4f6a-bf91-2fa647805f5f.png)
+
+### 5. What is the best choice of parameters according to the results obtained above? Why?
+
+#### :arrow_down_small: Comparisons of the best times of all experiments with different parameters
+
+![image](https://user-images.githubusercontent.com/74753713/134429140-2b2671d8-0a9c-4962-99ac-acd71e1bc37c.png)
+
+#### :arrow_down_small: Comparisons of the best results of the generations obtained from all the experiments with different parameters
+ 
+![image](https://user-images.githubusercontent.com/74753713/134429250-b19eda8b-2263-4b51-b6a6-ac1693970f08.png)
+
+After the execution of the experiments carried out in the previous points, all the resulting data were taken as a reference to be able to work with them making a comparison table taking first as a priority the time in which the parameters that obtained a better performance are those of a probability of crossover of 0.7 and of mutation of 0. 001 which are executed in 0.85 seconds, now taking as priority the number of the resulting generation with the fastest maximum fitness function found, it was obtained that its resulting parameters are those of a probability of croosover of 0.7 and a probability of mutation of 0 which gives us 6 as the generation with the maximum fitness function.
+It can be evidenced that a crossover probability that is less or more than 0.7 does not give us an optimal solution in terms of time and generations but all this individually since the results of the averages show that the more croosover you have, the average of all the populations that were generated will find the maximum function in one of their chromosomes faster than with a low croosover due to the continuous exchange of genes which gives a higher probability of finding the maximum fitness function.
+Reviewing exhaustively the results that perform worse, it can be seen that those with a lower probability of croosover are the ones that less quickly find the chromosome that maximizes the function, so also the probability of mutation being so low does not affect in a radical way the improvement or worsening of the execution of the program. 
+
+ 
+
 
