@@ -9,14 +9,6 @@ class Operations:
     most_powerful_fitness=0
     reproduction_probabilities=[]
 
-    def get_all_reproduction_probabilities(self):
-        self.reproduction_probabilities=[]
-        for chromosome in self.chromosome_populations:
-            self.reproduction_probabilities.append(chromosome.reproduction_probability)
-    
-    def get_reproduction_probabilities(self):
-        return self.reproduction_probabilities
-
     def set_crossover_probability(self,probability):
         self.crossover_probability=probability
     
@@ -83,4 +75,28 @@ class Operations:
                 reproduction_probability=0.0
             chromosome.reproduction_probability=reproduction_probability
             i=i+1
-            
+
+    def get_all_reproduction_probabilities(self):
+        self.reproduction_probabilities=[]
+        for chromosome in self.chromosome_populations:
+            self.reproduction_probabilities.append(chromosome.reproduction_probability)
+    
+    def get_reproduction_probabilities(self):
+        return self.reproduction_probabilities
+
+    def print_chromosome(chromosome):
+        print('[',end='')
+        for value in chromosome:
+            print(value ,end='') 
+            print(' ',end='')
+        print(']',end='')
+        print()
+
+    def print_chromosomes(self):
+        print('{',end='')
+        for chromosome in self.chromosome_populations:
+            Operations.print_chromosome(chromosome.chromosome)
+            print(' ',end='')
+        print('}',end='')
+        print()
+        
