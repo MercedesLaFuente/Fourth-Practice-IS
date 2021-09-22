@@ -18,3 +18,30 @@
              -pip install numpy  
 * Insert in the console terminal 'python operations.py' to start the program
 * The program will ask you to enter the size of the chromosome population, the number of genes it will have, its probability of crossover and mutation.
+
+## PROBLEM SOLVER AGENT ⚙️
+
+### Objective Formulation:
+Implement a genetic algorithm that allows to create new generations and from these to find the chromosome with the fitness function.
+  
+### Problem Formulation:
+
+### Initial State:
+A population of 100 chromosomes with random values varying from 0 to 1 and each with 20 genes.  
+
+![Cromosomas](https://user-images.githubusercontent.com/74753713/134265512-3477ec4f-3f20-4f2b-8e10-1327aee62dd1.png)
+
+### Objective State:
+A generation of chromosomes that has one chromosome that gives its maximum fitness function of the entire population.
+
+
+![Cromosomas solution](https://user-images.githubusercontent.com/74753713/134265649-00761b29-31a4-4eb8-8367-e77a27e003d8.png)
+
+ 
+### Test of Objective:
+Does the new generation of chromosomes have one that gives the maximum fitness function?
+  
+### Actions:
+* Selection
+* Crossover
+* Mutation
