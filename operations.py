@@ -187,3 +187,16 @@ class Operations:
         print('}',end='')
         print()
     
+
+
+    def initializate_all(self,poblation_size,number_genes,crossover,mutation):
+        operation=Operations()
+        operation.generate_random_chromosome_populations(poblation_size,number_genes,crossover,mutation)
+        operation.print_chromosomes()
+        values=operation.genetic_algorithm()
+        return values
+
+    def initializate_all_with_generation(self,poblation_size,number_genes,crossover,mutation,num_generation):
+        operation=Operations()
+        operation.generate_random_chromosome_populations(poblation_size,number_genes,crossover,mutation)
+        values=operation.genetic_algorithm_with_limit(num_generation)
