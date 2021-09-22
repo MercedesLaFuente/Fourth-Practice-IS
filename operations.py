@@ -152,6 +152,25 @@ class Operations:
                 return new_chromosome_population
         return new_chromosome_population    
     
+
+    def find_the_most_powerful_fitness(self,poblations):
+        count=0
+        for poblation in poblations:
+            fitness=self.get_fitness_function_master(poblation.chromosome)
+            count=count+fitness
+            if fitness == self.most_powerful_fitness:
+                return self.generation
+        if  count==0:
+            return -1 
+        return 0
+    
+    def find_the_fitness_maximums(self,poblations):
+        max_fitness=0
+        for poblation in poblations:
+            current_fitness=self.get_fitness_function_master(poblation.chromosome)
+            if current_fitness > max_fitness:
+                max_fitness=current_fitness
+        self.fitness_maximums.append(max_fitness)
     def print_chromosome(chromosome):
         print('[',end='')
         for value in chromosome:
