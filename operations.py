@@ -122,6 +122,35 @@ class Operations:
         new_chromosome.fitness=fitness
         new_chromosome.reproduction_probability=0.0
         return new_chromosome
+
+
+    def create_new_generation_of_chromosomes(self):
+        new_chromosome_population=[]
+        self.get_probabilities_reproduction()
+        self.get_all_reproduction_probabilities()
+        while len(new_chromosome_population) < self.get_chromosomes_populations_size():
+            if sum(self.reproduction_probabilities)>0:
+                selected_chromosomes=tuple(random.choices(copy.deepcopy(self.chromosome_populations),weights=copy.deepcopy(self.reproduction_probabilities),k=2))
+                chromosomex=selected_chromosomes[0]
+                chromosomey=selected_chromosomes[1]
+                if random.random() < self.crossover_probability:
+                    position=random.randint(0,(len(chromosomex.chromosome)-1))
+                    tuple_chromosome=self.crossover(chromosomex,chromosomey,position)
+                    chromosomex=tuple_chromosome[0]
+                    chromosomey=tuple_chromosome[1]
+                if random.random() < self.mutation_probability:
+                    chromosomex=self.mutation(chromosomex)
+                    chromosomey=self.mutation(chromosomey)
+                if len(new_chromosome_population) < self.get_chromosomes_populations_size():
+                    chromosomex.reproduction_probability=0.0
+                    new_chromosome_population.append(chromosomex)
+                if len(new_chromosome_population) < self.get_chromosomes_populations_size():
+                    chromosomey.reproduction_probability=0.0
+                    new_chromosome_population.append(chromosomey)  
+            else:
+                new_chromosome_population=self.chromosome_populations
+                return new_chromosome_population
+        return new_chromosome_population    
     
     def print_chromosome(chromosome):
         print('[',end='')
