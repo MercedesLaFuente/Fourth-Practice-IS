@@ -20,6 +20,7 @@ class Operations:
     most_powerful_fitness=0
     generation=1
     
+
     def set_crossover_probability(self,probability):
         self.crossover_probability=probability
     
@@ -218,6 +219,7 @@ class Operations:
         print('}',end='')
         print()
 
+
     def genetic_algorithm(self):
         current_fitness=self.find_the_most_powerful_fitness(self.chromosome_populations)
         while current_fitness == 0  :
@@ -276,6 +278,7 @@ class Operations:
         plt.show()
         
 
+
     def initializate_all(self,poblation_size,number_genes,crossover,mutation):
         operation=Operations()
         operation.generate_random_chromosome_populations(poblation_size,number_genes,crossover,mutation)
@@ -288,8 +291,49 @@ class Operations:
         operation.generate_random_chromosome_populations(poblation_size,number_genes,crossover,mutation)
         values=operation.genetic_algorithm_with_limit(num_generation)
 
+def main():
+    option=0
+    operation= Operations()
+    while option != 3:
+        print("Welcome to the Genetic Algorithm Menu")
+        print("To run the algorithm remember to enter the number of chromosomes and the number of genes you will have. ")
+        print("1) Run algorithm")
+        print("2) Plot the program running in 100 generations")
+        print("3) Exit")
+        option=int(input())
+        if option == 1:
+            print("Enter the chromosome numbers")
+            chromosome_number=int(input())
+            print("Enter the numbers of the genes of each chromosome.")
+            genes_number=int(input())
+            print("Enter the crossover probability")
+            crossover=float(input())
+            print("Enter the mutation probability.")
+            mutation=float(input())
+            start=timeit.default_timer()
+            generation=operation.initializate_all(chromosome_number,genes_number,crossover,mutation)
+            if generation == -1:
+                print("The generation could no longer be reproduced")
+            else:
+                print("The strongest chromosome was found in the generation: "+ str(generation))
+            end=timeit.default_timer()
+            times=end-start
+            print("Time of ejecution: " + format(times, '.8f'))
+        if option == 2:
+            print("Remember that the default test data is 100 chromosome populations with 20 genes each with croossover probabilities of 0.7 and 0.001.")
+            time.sleep(2)
+            chromosome_number=100
+            genes_number=20
+            crossover=0.7
+            mutation=0.001
+            num_generation=100
+            result=operation.initializate_all_with_generation(chromosome_number,genes_number,crossover,mutation,num_generation)
 
 
 
-#if __name__ == '__main__':
-    #Unir main
+
+
+
+
+if __name__ == '__main__':
+    main()
