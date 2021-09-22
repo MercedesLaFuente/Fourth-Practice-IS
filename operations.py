@@ -114,6 +114,15 @@ class Operations:
         offspring2.reproduction_probability=0.0
         return offspring1,offspring2
 
+    def mutation(self,chromosome):
+        new_chromosome=copy.deepcopy(chromosome)
+        position_to_mutate=random.randint(0,(new_chromosome.gene_number-1))
+        new_chromosome.chromosome[position_to_mutate]=(new_chromosome.chromosome[position_to_mutate]+1)%2
+        fitness=self.get_fitness_function_master(new_chromosome.chromosome)
+        new_chromosome.fitness=fitness
+        new_chromosome.reproduction_probability=0.0
+        return new_chromosome
+    
     def print_chromosome(chromosome):
         print('[',end='')
         for value in chromosome:
