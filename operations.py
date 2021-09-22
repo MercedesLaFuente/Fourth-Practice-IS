@@ -10,16 +10,16 @@ import copy
 class Operations:
 
     chromosome_populations=[] 
-    
-    crossover_probability=0.00
-    
-    mutation_probability=0.000
-    
-    most_powerful_fitness=0
-    
     reproduction_probabilities=[]
-
-
+    generations=[]
+    fitness_minimums=[]
+    fitness_maximums=[]
+    fitness_average=[]
+    crossover_probability=0.00
+    mutation_probability=0.000
+    most_powerful_fitness=0
+    generation=1
+    
 
     def set_crossover_probability(self,probability):
         self.crossover_probability=probability
@@ -172,8 +172,37 @@ class Operations:
                 max_fitness=current_fitness
         self.fitness_maximums.append(max_fitness)
 
+    def find_the_fitness_minimums(self,poblations):
+        min_fitness=100
+        for poblation in poblations:
+            current_fitness=self.get_fitness_function_master(poblation.chromosome)
+            if current_fitness < min_fitness:
+                min_fitness=current_fitness
+        self.fitness_minimums.append(min_fitness)
+    
+    def find_the_fitness_average(self,poblations):
+        sum=0
+        cont=1
+        for poblation in poblations:
+            sum=sum+self.get_fitness_function_master(poblation.chromosome)
+            cont=cont+1
+        average=sum/cont
+        self.fitness_average.append(average)
 
 
+    def print_solution_population(self,poblations):
+        print("------------------------------------     POPULATION SOLUTION         ----------------------------------------")
+        for poblation in poblations:
+            fitness=self.get_fitness_function_master(poblation.chromosome)
+            if fitness == self.most_powerful_fitness:
+                print("------------------------------------     CHROMOSOME RESULT          ----------------------------------------")
+                Operations.print_chromosome(poblation.chromosome)
+                print(" Fitness="+str(poblation.fitness))
+                print("------------------------------------------------------------------------------------------------------------")
+            else:
+                Operations.print_chromosome(poblation.chromosome)
+                print(" Fitness="+str(poblation.fitness))
+                
     def print_chromosome(chromosome):
         print('[',end='')
         for value in chromosome:
@@ -190,18 +219,7 @@ class Operations:
         print('}',end='')
         print()
 
-    def print_solution_population(self,poblations):
-        print("------------------------------------     POPULATION SOLUTION         ----------------------------------------")
-        for poblation in poblations:
-            fitness=self.get_fitness_function_master(poblation.chromosome)
-            if fitness == self.most_powerful_fitness:
-                print("------------------------------------     CHROMOSOME RESULT          ----------------------------------------")
-                Operations.print_chromosome(poblation.chromosome)
-                print(" Fitness="+str(poblation.fitness))
-                print("------------------------------------------------------------------------------------------------------------")
-            else:
-                Operations.print_chromosome(poblation.chromosome)
-                print(" Fitness="+str(poblation.fitness))
+
 
     def initializate_all(self,poblation_size,number_genes,crossover,mutation):
         operation=Operations()
