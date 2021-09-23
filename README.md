@@ -395,7 +395,7 @@ But while the initial population is bigger there is much more variety of genes a
 
 ## BIBLIOGRAPHY
 * Class slides
-
+* https://swcarpentry.github.io/python-novice-gapminder/09-plotting/index.html
 
 
  
