@@ -372,6 +372,15 @@ Reviewing exhaustively the results that perform worse, it can be seen that those
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\11.4" title="\Large x=\media" >
 
+In order to find an initial population that provides a higher probability of finding the chromosome with the maximum fitness function more quickly, the population numbers of 50,100,500,1000 chromosomes respectively were used and each one was run 5 times in order to complete the total of 20, the results oscillate between a high and low number consecutively but it can be evidenced that the numbers 100 and 1000 give the best results this may be because they are numbers that are obtained by multiplying the 10 with itself and are directly divisible by two, which will allow a more direct selection of their chromosomes.
+But while the initial population is bigger there is much more variety of genes and probability that by means of the crossover these can obtain faster results as long as their genes are varied or their probabilities of crossover or mutation are high but not in excess since they could also be counterproductive especially with the mutation.
+
+#### 7. Run the algorithm for 100 generations and plot the best, worst and average fitness function found in each generation vs. number of generations. found in each generation vs. the number of generations.
+
+![Print](https://user-images.githubusercontent.com/74753713/134438823-eeaa0390-c2f8-4925-a0f8-757b7291f5f7.png)
+
+
+
 
 ## CONCLUSION
 
