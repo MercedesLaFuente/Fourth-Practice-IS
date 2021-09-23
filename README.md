@@ -384,9 +384,14 @@ But while the initial population is bigger there is much more variety of genes a
 
 
 ## CONCLUSION
+* Genetic algorithms allow to perform a variable simulation of the growth of a population and transforming it to new generations, making modifications to the probabilities of the genetic algorithm.
+* The following experiments were carried out in the Project:
 
+     - Test without Crossover. - Finding the chromosome with the maximum fitness function was not generated correctly due to the inexistence of crossover, which always generated that the new generations would be the same and even if they entered the mutation, the changes would only be seen in one population and the others would continue repeating themselves.
 
+     - Test without mutation. - It was observed that the chromosome with the maximum fitness was reached with a lower number of generations and therefore the time was fast, from the tests that were done, a population was reached in which chromosomes with 0 genes were generated, which prevented them from generating their fitness functions and therefore that generation was returned due to its null reproduction probabilities.
 
+* In genetic algorithms the crossover is in charge of searching for better individuals by exchanging bits and the mutation allows a diverse population to avoid premature convergence; but the abuse of mutation causes a random search.
 
 ## BIBLIOGRAPHY
 * Class slides
